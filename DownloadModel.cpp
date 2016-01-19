@@ -6,7 +6,7 @@ DownloadModel::DownloadModel(QObject *pobj/*= 0*/)
     Manager = new QNetworkAccessManager(this);
     connect(Manager, SIGNAL(finished(QNetworkReply*)),
             this, SLOT(slotFinished(QNetworkReply*)));
-    MaxDownloads = 2;
+    MaxDownloads = 6;
 }
 
 void DownloadModel::NextDownload(const QUrl &url)
